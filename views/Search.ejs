@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Asap:400,700|Lato:400,700,900|Source+Sans+Pro:400,700&display=swap);
+        body {
+            margin:0;
+            background:#f9f9f9;
+            font:14px asap,arial
+        }
+        h1 {
+            margin:0 0 -10px 0;
+            font:bold 36px asap,arial;
+            color:#505050;
+            letter-spacing:-1px
+        }
+        p {
+            font:17px "source sans pro",arial;
+            color:#484848;
+            line-height:1.5;
+            text-align:left;
+            padding:0 0 0 2px
+        }
+        a {
+            color:#006cff;
+            text-decoration:none
+        }
+        a:hover {
+            text-decoration:underline
+        }
+        br {
+            clear:both
+        }
+        .logo {
+            font:bold 40px arial,tahoma;
+            color:#222;
+            word-wrap:break-word;
+            cursor: pointer;
+        }
+        header {
+            text-align:center
+        }
+        header #top {
+            background:#fff;
+            box-shadow:0 1px 4px #ccc
+        }
+        header #logo {
+            padding:40px 20px 25px
+        }
+        header a.logo {
+            font:900 49px asap,arial;
+            color:#0186da;
+            letter-spacing:-1px;
+            text-shadow:0 2px 2px #ddd;
+            word-wrap:break-word
+        }
+        header a.logo:hover {
+            text-decoration:none
+        }
+        main {
+            display:block;
+            margin:0 auto 0 auto;
+            padding:0 20px;
+            max-width:1000px
+        }
+        section#urlbox {
+            margin:0 auto 20px auto;
+            max-width:758px;
+            box-shadow:0 1px 4px #ccc;
+            border-radius:2px;
+            padding:10px 30px 5px;
+            background:#fff;
+            text-align:center
+        }
+        section#content {
+            max-width:720px;
+            margin:30px auto 20px;
+            padding:0 0 20px 0
+        }
+        #formurl {
+        display:table;
+        max-width:600px;
+        margin:0 auto
+        }
+        footer {
+            text-align:center;
+            font:17px "source sans pro",arial;
+            color:#eee;
+            background:#333;
+            width:100%;
+            border-top:4px solid #00a0db;
+            padding:20px 0 90px;
+            line-height:1.5;
+            margin:40px 0 0 0;
+            position:absolute;
+            bottom:0;
+            height:40px
+        }
+        html {
+            position:relative;
+            min-height:100%
+        }
+        body {
+            margin-bottom:200px
+        }
+        * {
+            box-sizing:border-box;
+            -webkit-box-sizing:border-box;
+            -moz-box-sizing:border-box
+        }
+        section#urlbox h1 {
+            margin:10px auto 30px auto
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input[type="url"], input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script type="text/javascript">
+        function redirectToHome() {
+            window.location.href = '/';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div id="top">
+            <div id="logo">
+                <a onclick="redirectToHome()" class="logo">URL Shortener</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="content">
+            <br>
+        </section>
+        <section id="urlbox">
+            <h1>Enter text to Search</h1>
+            <div class="container">    
+                <form action="/SearchResults" method="GET">
+                    <input required placeholder="Type Here" type="text" name="searchText">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="footerbox">
+            <div>A Tool to shorten a long link</div>
+        </div>
+    </footer>
+</body>
+</html>

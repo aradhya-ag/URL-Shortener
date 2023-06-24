@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Short URL</title>
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Asap:400,700|Lato:400,700,900|Source+Sans+Pro:400,700&display=swap);
+        body {
+            margin:0;
+            background:#f9f9f9;
+            font:14px asap,arial
+        }
+        h1 {
+            margin:0 0 -10px 0;
+            font:bold 36px asap,arial;
+            color:#505050;
+            letter-spacing:-1px
+        }
+        p {
+            font:17px "source sans pro",arial;
+            color:#484848;
+            line-height:1.5;
+            text-align:left;
+            padding:0 0 0 2px
+        }
+        a {
+            color:#006cff;
+            text-decoration:none
+        }
+        a:hover {
+            text-decoration:underline
+        }
+        br {
+            clear:both
+        }
+        .logo {
+            font:bold 40px arial,tahoma;
+            color:#222;
+            word-wrap:break-word;
+            cursor: pointer;
+        }
+        .colorbuttonsmall {
+            display:inline-block;
+            background-color:#2c87c5;
+            font:normal 16px lato,arial;
+            color:#fff;
+            padding:7px 16px;
+            border:0;
+            border-radius:3px;
+            text-decoration:none;
+            margin:0 0 5px 0;
+            height:36px;
+            cursor: pointer
+        }
+        header {
+            text-align:center
+        }
+        header #top {
+            background:#fff;
+            box-shadow:0 1px 4px #ccc
+        }
+        header #logo {
+            padding:40px 20px 25px
+        }
+        header a.logo {
+            font:900 49px asap,arial;
+            color:#0186da;
+            letter-spacing:-1px;
+            text-shadow:0 2px 2px #ddd;
+            word-wrap:break-word
+        }
+        header a.logo:hover {
+            text-decoration:none
+        }
+        main {
+            display:block;
+            margin:0 auto 0 auto;
+            padding:0 20px;
+            max-width:1000px
+        }
+        section#urlbox {
+            margin:0 auto 20px auto;
+            max-width:758px;
+            box-shadow:0 1px 4px #ccc;
+            border-radius:2px;
+            padding:10px 30px 5px;
+            background:#fff;
+            text-align:center
+        }
+        section#content {
+            max-width:720px;
+            margin:30px auto 20px;
+            padding:0 0 20px 0
+        }
+        #formurl {
+            display:table;
+            max-width:600px;
+            margin:0 auto
+        }
+        footer {
+            text-align:center;
+            font:17px "source sans pro",arial;
+            color:#eee;
+            background:#333;
+            width:100%;
+            border-top:4px solid #00a0db;
+            padding:20px 0 90px;
+            line-height:1.5;
+            margin:40px 0 0 0;
+            position:absolute;
+            bottom:0;
+            height:40px
+        }
+        html {
+            position:relative;
+            min-height:100%
+        }
+        body {
+            margin-bottom:200px
+        }
+        * {
+            box-sizing:border-box;
+            -webkit-box-sizing:border-box;
+            -moz-box-sizing:border-box
+        }
+    </style>
+    <script type="text/javascript">
+        function redirectToHome() {
+            window.location.href = '/';
+        }
+        function goToShortUrl() {
+            window.location.href = '/ShortUrl';
+        }
+    </script>            
+</head>
+<body>
+    <header>
+        <div id="top">
+            <div id="logo">
+                <a onclick="redirectToHome()" class="logo">URL Shortener</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="content">
+            <h1>Your shortened URL</h1>
+            <p>Copy the shortened link and share it in messages, texts, posts, websites and other locations.</p>
+        </section>
+        <section id="urlbox">
+            <div id="formurl" class="mw450">
+                <p class="boxtextleft">
+                    Short URL: <a href="<%= shortUrl %>" target="_blank"><%= shortUrl %></a>
+                    <br><br>
+                    Long URL: <a href="<%= fullUrl %>" target="_blank"><%= fullUrl %></a>
+                    <br><br>
+                    <a onclick="goToShortUrl()" class="colorbuttonsmall">Shorten another URL</a>
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="footerbox">
+            <div>A Tool to shorten a long link</div>
+        </div>
+    </footer>
+</body>
+</html>
